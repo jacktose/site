@@ -1,0 +1,103 @@
+html, body {
+    background-color: #eee;
+}
+
+.header {
+    margin: 20px 0px;
+    font-size: 36px;
+    font-family: Vollkorn, serif;
+}
+
+.title {
+
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px 20px;
+}
+
+.main {
+    /*display: flex;*/
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form {
+    /*flex: 1;*/
+    max-width: 600px;
+    margin: 20px;
+    font-size: 30px;
+    font-family: "Source Code Pro", "Courier New", monospace;
+}
+
+.input {
+
+}
+
+.form-title {
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.form-element {
+    display: block;
+    /*height: 40px;*/
+    width: 100%;
+    margin: 20px 0px;
+    border: none;
+    /*border-left: 2px solid transparent;*/
+    background-color: lightgray;
+    font-size: 20px;
+}
+
+form input {
+    padding: 8px 8px;
+    font-size: 30px;
+    font-family: inherit;
+}
+
+form textarea {
+    padding: 8px;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.form-element:focus {
+    /*border-left: 2px solid darkblue;*/
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+.form-element.filled:valid {
+    background-color: #f9f9f9;
+}
+
+.form-element:invalid {
+    background-color: #fcc;
+}
+
+.button {
+    /*height: 100%;*/
+    width: 100%;
+}
+
+button.form-element {
+    height: 100%;
+    border: none;
+    padding: 20px;
+    background: transparent;
+    color: blue;
+    /*font-size: 24px;*/
+    font-family: inherit;
+}
+
+button.form-element:hover {
+    /*border: none;*/
+    background: lightblue;
+    color: darkblue;
+}
+
+button.form-element:focus {
+    outline: none;
+}

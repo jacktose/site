@@ -2,33 +2,35 @@
 <html>
 <head>
     <title>Jack Enneking</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous' />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vollkorn|Source+Code+Pro" />
 </head>
 
 <body>
     <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-12">
-                    <h1>Jack Enneking</h1>
-                </div>
-            </div>
+        <div class="title">
+            <h1>Jack Enneking</h1>
         </div>
     </header>
 
     <div class="main">
-        <div class="container">
-            <div class="form">
-                <form method="POST" action="http://formspree.io/jackenneking@gmail.com">
-                    <input type="text" name="name" placeholder="your name" />
-                    <input type="email" name="email" placeholder="your email" />
-                    <textarea name="message" placeholder="your message"></textarea>
-                    <button type="submit">send</button>
-                </form>
-            </div>
-
+        <div class="form">
+            <p class="form-title">contact ></p>
+            <form method="POST" action="https://formspree.io/jackenneking@gmail.com">
+                <div class="input">
+                    <input class="form-element" type="text" name="name" placeholder="your name" />
+                    <input class="form-element" type="email" name="email" placeholder="your email" />
+                    <textarea class="form-element" name="message" placeholder="your message"></textarea>
+                </div>
+                <div class="button">
+                    <button class="form-element" type="submit">send</button>
+                </div>
+            </form>
         </div>
     </div>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
 </html>
