@@ -53,9 +53,9 @@ h1 {
     background-color: #e0e0e0;
     font-size: 20px;
     color: #333;
-    transition: color            2000ms,
-                background-color 2000ms,
-                border-left      2000ms;
+    transition: color            300ms,
+                background-color 300ms,
+                border-left      300ms;
 }
 
 ::-webkit-input-placeholder {
@@ -79,9 +79,13 @@ form textarea {
     font-family: inherit;
 }
 
-.form-element:focus {
+.form-element:focus,
+.form-element.filled:valid:focus,
+.form-element.filled:invalid:focus {
     /*border-left: 3px solid #e0e0e0;*/
     background-color: transparent;
+    color: #333;
+    border-left: 3px solid #e0e0e0;
     outline: none;
 }
 
@@ -115,12 +119,18 @@ button.form-element {
 
 button.form-element:hover,
 button.form-element:focus {
-    background-color: transparent;
+    /*background-color: transparent;*/
     color: #333;
     outline: none;
 }
 
 button.form-element:active,
 button.form-element:focus:active {
-
+    background-color: transparent;
+    color: #a9a9a9;
+    /*border: 3px solid transparent;*/
+    outline: none;
+    transition: color            0ms,
+                background-color 0ms,
+                border           0ms;
 }

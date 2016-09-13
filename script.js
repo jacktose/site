@@ -6,11 +6,6 @@ var main = function() {
             $(this).removeClass('filled');
         }
     });
-
-    $('.form-element').focus(function(event) {
-        $(this).removeClass('filled');
-    });
-
 }
 
 $(document).ready(main);
