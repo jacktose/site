@@ -1,5 +1,6 @@
 html, body {
-    background-color: #eee;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
 .header {
@@ -46,58 +47,80 @@ h1 {
     width: 100%;
     margin: 20px 0px;
     border: none;
-    /*border-left: 2px solid transparent;*/
-    background-color: lightgray;
+    border-left: 3px solid #e0e0e0;
+    border-radius: 3px;
+    padding: 8px 5px;
+    background-color: #e0e0e0;
     font-size: 20px;
+    color: #333;
+    transition: color            2000ms,
+                background-color 2000ms,
+                border-left      2000ms;
+}
+
+::-webkit-input-placeholder {
+    color: #a9a9a9;
+}
+::-moz-placeholder {
+    color: #a9a9a9;
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    color: #a9a9a9;
 }
 
 form input {
-    padding: 8px 8px;
     font-size: 30px;
     font-family: inherit;
 }
 
 form textarea {
-    padding: 8px;
-    min-height: 120px;
+    height: 200px;
     font-family: inherit;
 }
 
 .form-element:focus {
-    /*border-left: 2px solid darkblue;*/
-    background-color: #f9f9f9;
+    /*border-left: 3px solid #e0e0e0;*/
+    background-color: transparent;
     outline: none;
 }
 
 .form-element.filled:valid {
-    background-color: #f9f9f9;
+    background-color: transparent;
+    border-left: 3px solid transparent;
 }
 
-.form-element:invalid {
+.form-element.filled:invalid {
+    color: #900;
     background-color: #fcc;
+    border-left: 3px solid transparent;
 }
 
 .button {
     /*height: 100%;*/
-    width: 100%;
+    /*width: 100%;*/
 }
 
 button.form-element {
     height: 100%;
-    border: none;
-    padding: 20px;
-    background: transparent;
-    color: blue;
+    border: 3px solid #e0e0e0;
+    padding: 20px 5px;
+    /*background-color: transparent;*/
+    background-color: #purple;
+    color: #a9a9a9;
     /*font-size: 24px;*/
     font-family: inherit;
+    /*transition: color 500ms;*/
 }
 
-button.form-element:hover {
-    /*border: none;*/
-    background: lightblue;
-    color: darkblue;
-}
-
+button.form-element:hover,
 button.form-element:focus {
+    background-color: transparent;
+    color: #333;
     outline: none;
+}
+
+button.form-element:active,
+button.form-element:focus:active {
+
 }
