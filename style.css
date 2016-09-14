@@ -1,3 +1,8 @@
+/****************************************
+*   style for http://jackenneking.com   *
+*    copyright 2016 by Jack Enneking    *
+****************************************/
+
 html, body {
     background-color: #f0f0f0;
     color: #333;
@@ -15,22 +20,28 @@ h1 {
 }
 
 .main {
-    /*display: flex;*/
     width: 100%;
     margin: 0 auto;
 }
 
 .form {
-    /*flex: 1;*/
     max-width: 600px;
     margin: 20px;
-    font-size: 30px;
     font-family: "Source Code Pro", "Courier New", monospace;
+}
+
+form {
+    width: 100%;
 }
 
 .form-title {
     font-size: 20px;
     margin: 20px 0px;
+}
+
+form input, textarea {
+    /* compensate for 13px of border & margin, to line up with button */
+    max-width: 587px;
 }
 
 label {
@@ -41,15 +52,16 @@ label {
 
 .form-element {
     display: block;
-    /*height: 40px;*/
     width: 100%;
     margin: 20px 0px;
     border: none;
     border-left: 3px solid #e0e0e0;
     border-radius: 3px;
+    box-shadow: none;
     padding: 8px 5px;
     background-color: #e0e0e0;
     font-size: 20px;
+    font-family: inherit;
     color: #333;
     transition: color            300ms,
                 background-color 300ms,
@@ -67,20 +79,14 @@ label {
     color: #a9a9a9;
 }
 
-form input {
-    font-size: 30px;
-    font-family: inherit;
-}
-
 form textarea {
     height: 200px;
-    font-family: inherit;
+    /*font-family: inherit;*/
 }
 
 .form-element:focus,
 .form-element.filled:valid:focus,
 .form-element.filled:invalid:focus {
-    /*border-left: 3px solid #e0e0e0;*/
     background-color: transparent;
     color: #333;
     border-left: 3px solid #e0e0e0;
@@ -98,21 +104,27 @@ form textarea {
     border-left: 3px solid transparent;
 }
 
+.button {
+    width: 100%;
+}
+
 button.form-element {
     height: 100%;
+    width: 100%;
     border: 3px solid #e0e0e0;
-    padding: 20px 5px;
-    /*background-color: transparent;*/
-    background-color: #purple;
+    padding: 20px 0px;
     color: #a9a9a9;
-    /*font-size: 24px;*/
+    font-size: 22px;
     font-family: inherit;
-    /*transition: color 500ms;*/
+}
+
+::-moz-focus-inner {
+  border: none;
 }
 
 button.form-element:hover,
 button.form-element:focus {
-    /*background-color: transparent;*/
+    background-color: transparent;
     color: #333;
     outline: none;
 }
@@ -121,7 +133,7 @@ button.form-element:active,
 button.form-element:focus:active {
     background-color: transparent;
     color: #a9a9a9;
-    /*border: 3px solid transparent;*/
+    border: 3px solid transparent;
     outline: none;
     transition: color            0ms,
                 background-color 0ms,
