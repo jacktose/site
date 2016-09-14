@@ -2,8 +2,14 @@
 <html>
 <head>
     <title>Jack Enneking</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vollkorn|Source+Code+Pro">
+    <link rel="icon"
+          type="image/png"
+          href="favicon.png">
+    <link rel="stylesheet"
+          type="text/css"
+          href="style.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Vollkorn|Source+Code+Pro">
 </head>
 
 <body>
@@ -16,22 +22,26 @@
     <div class="main">
         <div class="form">
             <p class="form-title">contact ></p>
-            <form method="POST" action="https://formspree.io/jackenneking@gmail.com">
-            <!-- <form method="post" action=""> -->
+            <form name="contact" method="POST" action="https://formspree.io/jackenneking@gmail.com">
+            <!-- <form name="contact"> -->
                 <div class="input">
-                    <input class="form-element" type="text" name="name" placeholder="your name" required>
-                    <input class="form-element" type="email" name="email" placeholder="your email">
-                    <textarea class="form-element" name="message" placeholder="your message" required></textarea>
+                    <label for="name">name</label>
+                    <input id="name" class="form-element" type="text" name="name" placeholder="your name" required>
+                    <label for="email">email</label>
+                    <input id="email" class="form-element" type="email" name="email" placeholder="your email">
+                    <label for="message">message</label>
+                    <textarea id="message" class="form-element" name="message" placeholder="your message" required></textarea>
                 </div>
                 <div class="button">
-                    <button id="mybutt" class="form-element" type="submit">send</button>
+                    <button class="form-element" type="submit" name="send">send</button>
                 </div>
             </form>
         </div>
     </div>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"
+        integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="crossorigin="anonymous"></script>
 <script src="script.js"></script>
 
 </html>

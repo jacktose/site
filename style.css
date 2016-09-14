@@ -9,10 +9,6 @@ html, body {
     font-family: Vollkorn, serif;
 }
 
-.title {
-
-}
-
 h1 {
     margin: 0px;
     padding: 0px 20px;
@@ -32,13 +28,15 @@ h1 {
     font-family: "Source Code Pro", "Courier New", monospace;
 }
 
-.input {
-
-}
-
 .form-title {
     font-size: 20px;
     margin: 20px 0px;
+}
+
+label {
+    display: none;
+    font-size: 20px;
+    margin: 20px 0px 5px;
 }
 
 .form-element {
@@ -98,11 +96,6 @@ form textarea {
     color: #900;
     background-color: #fcc;
     border-left: 3px solid transparent;
-}
-
-.button {
-    /*height: 100%;*/
-    /*width: 100%;*/
 }
 
 button.form-element {
