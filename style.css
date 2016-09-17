@@ -39,11 +39,6 @@ form {
     margin: 20px 0px;
 }
 
-form input, textarea {
-    /* compensate for 13px of border & margin, to line up with button */
-    max-width: 587px;
-}
-
 label {
     display: none;
     font-size: 20px;
@@ -52,6 +47,7 @@ label {
 
 .form-element {
     display: block;
+    box-sizing: border-box;
     width: 100%;
     margin: 20px 0px;
     border: none;
