@@ -8,7 +8,7 @@ html, body {
     color: #333;
 }
 
-.header {
+header {
     margin: 20px 0px;
     font-size: 36px;
     font-family: Vollkorn, serif;
@@ -19,12 +19,12 @@ h1 {
     padding: 0px 20px;
 }
 
-.main {
+div.main {
     width: 100%;
     margin: 0 auto;
 }
 
-.form {
+div.form {
     max-width: 600px;
     margin: 20px;
     font-family: "Source Code Pro", "Courier New", monospace;
@@ -34,78 +34,65 @@ form {
     width: 100%;
 }
 
-.form-title {
-    font-size: 20px;
+p.form-title {
     margin: 20px 0px;
+    font-size: 20px;
 }
 
 label {
     display: none;
-    font-size: 20px;
     margin: 20px 0px 5px;
+    font-size: 20px;
 }
 
 .form-element {
     display: block;
-    box-sizing: border-box;
+    box-sizing: border-box; /* compute all their sizes the same way */
     width: 100%;
     margin: 20px 0px;
     border: none;
     border-left: 3px solid #e0e0e0;
     border-radius: 3px;
     box-shadow: none;
+    outline: none;
     padding: 8px 5px;
     background-color: #e0e0e0;
+    color: #333;
     font-size: 20px;
     font-family: inherit;
-    color: #333;
-    transition: color            300ms,
+    transition: border-left      300ms,
                 background-color 300ms,
-                border-left      300ms;
+                color            300ms;
 }
 
-::-webkit-input-placeholder {
-    color: #a9a9a9;
-}
-::-moz-placeholder {
-    color: #a9a9a9;
-    opacity: 1;
-}
-:-ms-input-placeholder {
-    color: #a9a9a9;
-}
+::-webkit-input-placeholder { color: #a9a9a9; }
+::-moz-placeholder          { color: #a9a9a9; opacity: 1; }
+:-ms-input-placeholder      { color: #a9a9a9; }
 
 form textarea {
     height: 200px;
-    /*font-family: inherit;*/
 }
 
 .form-element:focus,
-.form-element.filled:valid:focus,
-.form-element.filled:invalid:focus {
+.form-element:focus.filled:valid,
+.form-element:focus.filled:invalid {
+    border-left: 3px solid #e0e0e0;
     background-color: transparent;
     color: #333;
-    border-left: 3px solid #e0e0e0;
-    outline: none;
 }
 
 .form-element.filled:valid {
-    background-color: transparent;
     border-left: 3px solid transparent;
+    background-color: transparent;
 }
 
 .form-element.filled:invalid {
-    color: #900;
-    background-color: #fcc;
     border-left: 3px solid transparent;
-}
-
-.button {
-    width: 100%;
+    background-color: #fcc;
+    color: #900;
 }
 
 button.form-element {
-    height: 100%;
     width: 100%;
     border: 3px solid #e0e0e0;
     padding: 20px 0px;
@@ -115,23 +102,21 @@ button.form-element {
 }
 
 ::-moz-focus-inner {
-  border: none;
+    border: none;
 }
 
 button.form-element:hover,
 button.form-element:focus {
     background-color: transparent;
     color: #333;
-    outline: none;
 }
 
 button.form-element:active,
-button.form-element:focus:active {
+button.form-element:active:focus {
+    border: 3px solid transparent;
     background-color: transparent;
     color: #a9a9a9;
-    border: 3px solid transparent;
-    outline: none;
-    transition: color            0ms,
-                background-color 0ms,
-                border           0ms;
+    transition: color            100ms,
+                background-color 100ms,
+                border           100ms;
 }

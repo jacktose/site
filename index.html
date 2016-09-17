@@ -13,35 +13,31 @@
     </head>
 
     <body>
-        <header class="header">
+        <header>
             <div class="title">
                 <h1>Jack Enneking</h1>
             </div>
         </header>
 
         <div class="main">
-            <div class="form" id="form-div">
+            <div class="form">
                 <p class="form-title">contact ></p>
                 <form name="contact" method="POST" action="https://formspree.io/jackenneking@gmail.com">
-                <!-- <form name="contact"> -->
-                    <div class="input">
-                        <label for="name">name</label>
-                        <input id="name" class="form-element" type="text" name="name" placeholder="your name" required>
-                        <label for="email">email</label>
-                        <input id="email" class="form-element" type="email" name="email" placeholder="your email">
-                        <label for="message">message</label>
-                        <textarea id="message" class="form-element" name="message" placeholder="your message" required></textarea>
-                    </div>
-                    <div class="button">
-                        <button class="form-element" type="submit" name="send">send</button>
-                    </div>
+                    <label for="name">name</label>
+                    <input id="name" class="form-element" type="text" name="name" placeholder="your name" required>
+                    <label for="email">email</label>
+                    <input id="email" class="form-element" type="email" name="email" placeholder="your email">
+                    <label for="message">message</label>
+                    <textarea id="message" class="form-element" name="message" placeholder="your message" required></textarea>
+                    <button class="form-element" type="submit" name="send">send</button>
                 </form>
             </div>
         </div>
     </body>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"
-            integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="crossorigin="anonymous"></script>
+            integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+            crossorigin="anonymous"></script>
     <script src="script.js"></script>
 
 </html>
