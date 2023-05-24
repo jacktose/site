@@ -1,3 +1,4 @@
+// Jack Haden-Enneking
 var main = function() {
     /*
     $('.form-element').blur(function(event) {
