@@ -1,0 +1,5 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^jenny\.haden\-enneking\.net$
+RewriteRule ^/?$ "https\:\/\/students\.washington\.edu\/jlhaden\/" [R=301,L]
+

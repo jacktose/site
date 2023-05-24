@@ -1,0 +1,5 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.jack\.haden\-enneking\.net$
+RewriteRule ^/?$ "https\:\/\/jack\.haden\-enneking\.net\/" [R=301,L]
+
