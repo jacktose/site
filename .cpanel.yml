@@ -1,5 +1,4 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH="/home/jacktose/public_html/"
-    - /bin/cp -R "public_html/*" "$DEPLOYPATH"
+    - for DIRNAME in "public_html" "jack.haden-enneking.net" "jenny.haden-enneking.net"; do printf "\n${DIRNAME}\n"; /usr/bin/rsync -avv "./${DIRNAME}/." "${HOME}/${DIRNAME}/"; done
