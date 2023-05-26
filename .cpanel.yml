@@ -1,4 +1,5 @@
 ---
 deployment:
   tasks:
-    - for DIRNAME in "public_html" "jack.haden-enneking.net" "jenny.haden-enneking.net"; do printf "\n${DIRNAME}\n"; /usr/bin/rsync -avv "./${DIRNAME}/." "${HOME}/${DIRNAME}/"; done
+    - DIRS=("public_html" "jack.haden-enneking.net" "jenny.haden-enneking.net")
+    - for DIR in "${DIRS[@]}"; do printf "\n${DIR}\n"; /usr/bin/rsync -avv "./${DIR}/." "${HOME}/${DIR}/"; done
